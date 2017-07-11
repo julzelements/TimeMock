@@ -16,6 +16,7 @@
 		EC2D6B301F14591200CB0FD2 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B2E1F14591200CB0FD2 /* test.txt */; };
 		EC2D6B321F1460F200CB0FD2 /* spiderman.srt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B311F1460F200CB0FD2 /* spiderman.srt */; };
 		EC2D6B331F1460F200CB0FD2 /* spiderman.srt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B311F1460F200CB0FD2 /* spiderman.srt */; };
+		EC2D6B371F148FFD00CB0FD2 /* StanzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B351F148FFD00CB0FD2 /* StanzaTests.swift */; };
 		EC5681981F10F64A00C139CE /* MyTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5681971F10F64A00C139CE /* MyTime.swift */; };
 		EC56819A1F10FFB200C139CE /* MyTimeDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5681991F10FFB200C139CE /* MyTimeDummy.swift */; };
 		ECD64A5E1F0A4536004BFA93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD64A5D1F0A4536004BFA93 /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 		EC2D6B291F139E5700CB0FD2 /* Subtitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
 		EC2D6B2E1F14591200CB0FD2 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		EC2D6B311F1460F200CB0FD2 /* spiderman.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spiderman.srt; sourceTree = "<group>"; };
+		EC2D6B351F148FFD00CB0FD2 /* StanzaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StanzaTests.swift; sourceTree = "<group>"; };
 		EC5681971F10F64A00C139CE /* MyTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTime.swift; sourceTree = "<group>"; };
 		EC5681991F10FFB200C139CE /* MyTimeDummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTimeDummy.swift; sourceTree = "<group>"; };
 		ECD64A5A1F0A4536004BFA93 /* TimeMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +148,7 @@
 				ECD64A741F0A4536004BFA93 /* Info.plist */,
 				EC2D6B211F13991800CB0FD2 /* SubtitleTests.swift */,
 				EC2D6B231F1399C100CB0FD2 /* TestConstants.swift */,
+				EC2D6B351F148FFD00CB0FD2 /* StanzaTests.swift */,
 			);
 			path = TimeMockTests;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				ECD64A731F0A4536004BFA93 /* TimeMockTests.swift in Sources */,
 				EC2D6B2A1F139E5700CB0FD2 /* Subtitle.swift in Sources */,
+				EC2D6B371F148FFD00CB0FD2 /* StanzaTests.swift in Sources */,
 				EC2D6B241F1399C100CB0FD2 /* TestConstants.swift in Sources */,
 				EC2D6B221F13991800CB0FD2 /* SubtitleTests.swift in Sources */,
 			);
