@@ -2,12 +2,27 @@
 
 import UIKit
 
-let stanzaBlob = "28\n00:01:46,120 --> 00:01:49,320\n- But you are a kid, you are 18\n- This is my chance to prove myself."
+let stanzaBlob = "28\n00:01:46,120 --> 00:01:49,320\n- But you are a kid, you're 18\n- This is my chance to prove myself."
 
-var regex = try NSRegularExpression(pattern: "^[0-9]+", options: .caseInsensitive)
-var match = regex.matches(in: stanzaBlob, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, stanzaBlob.characters.count))
-let i = match.first
+//let pattern = "^[0-9]+"
+let timeStampPattern = "\\d\\d:\\d\\d:\\d\\d,\\d\\d\\d"
 
-let index = (stanzaBlob as NSString).substring(with: (i?.range)!)
+var timeStampRegex = try! NSRegularExpression(pattern: timeStampPattern, options: .caseInsensitive)
 
-print(index)
+var range = NSMakeRange(0, timeStampPattern.utf16.count)
+
+var matches = timeStampRegex.matches(in: stanzaBlob,
+                                     range: NSMakeRange(0, stanzaBlob.utf16.count))
+
+let times = matches.map { result -> String in
+    let timesRange = result.rangeAt(0)
+    
+    let start = String.UTF16Index(timesRange.location)
+    let end = String.UTF16Index(timesRange.location + timesRange.length)
+    let time = String(stanzaBlob.utf16[start..<end])!
+    
+    return time
+}
+
+
+print(times)

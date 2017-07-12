@@ -10,18 +10,29 @@ import XCTest
 @testable import TimeMock
 
 class StanzaTests: XCTestCase {
-    var stanzaBlob: String!
+    var stanza: Stanza!
     
     
     override func setUp() {
         super.setUp()
-        stanzaBlob = "28\n00:01:46,120 --> 00:01:49,320\n- But you are a kid, you are 18\n- This is my chance to prove myself."
+        let stanzaBlob = "28\n00:01:46,120 --> 00:01:49,320\n- But you are a kid, you are 18\n- This is my chance to prove myself."
+        stanza = Stanza(stanzaBlob: stanzaBlob)
     }
     
     func testStanzaShouldHaveIndexOf28() {
-        let myStanza = Stanza(stanzaBlob: stanzaBlob)
+        
         let expectedIndex: Int = 28
-        XCTAssertEqual(expectedIndex, myStanza.index)
+        XCTAssertEqual(expectedIndex, stanza.index)
+    }
+    
+    func testStanzaShouldHaveStartTime() {
+        let expectedStartTime = "00:01:46,120"
+        XCTAssertEqual(expectedStartTime, stanza.startTime)
+    }
+    
+    func testStanzaShouldHaveEndTime() {
+        let expectedEndTime = "00:01:49,320"
+        XCTAssertEqual(expectedEndTime, stanza.endTime)
     }
     
 }
