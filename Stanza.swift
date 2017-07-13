@@ -13,20 +13,31 @@ class Stanza {
     var index: Int!
     var startTime: String!
     var endTime: String!
+    var lines: [String]!
+    var splitBlob: [String]!
     
     init(stanzaBlob: String) {
-        index = scanForIndex(stanzaBlob: stanzaBlob)
-        startTime = scanForTimes(stanzaBlob: stanzaBlob)[0]
-        endTime = scanForTimes(stanzaBlob: stanzaBlob)[1]
+        splitBlob = splitBlobIntoLines(stanzaBlob: stanzaBlob)
+        index = scanForIndex(stanzaBlob: splitBlob[0])
+        let tupleOfTimes = scanForTimes(stanzaBlob: splitBlob[1])
+        startTime = tupleOfTimes.startTime
+        endTime = tupleOfTimes.endTime
+        lines = scanForLines(splitBlob: splitBlob)
+    }
+    
+    private func splitBlobIntoLines(stanzaBlob: String) -> [String] {
+        let santitizedLineBreaks = stanzaBlob.replacingOccurrences(of: "\r", with: "\n")
+        let split = santitizedLineBreaks.components(separatedBy: "\n")
+        return split
     }
     
     private func scanForIndex(stanzaBlob: String) -> Int {
-        
     let regex = try! NSRegularExpression(pattern: "^[0-9]+", options: .caseInsensitive)
-    
-    let match = regex.matches(in: stanzaBlob, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, stanzaBlob.characters.count))
+    let match = regex.matches(in: stanzaBlob,
+                              options: NSRegularExpression.MatchingOptions(rawValue: 0),
+                              range: NSMakeRange(0, stanzaBlob.characters.count))
+        
     let i = match.first
-    
     let indexString = (stanzaBlob as NSString).substring(with: (i?.range)!)
         if let indexInt = Int(indexString) {
             return indexInt
@@ -35,7 +46,7 @@ class Stanza {
         }
     }
     
-    private func scanForTimes(stanzaBlob: String) -> [String] {
+    private func scanForTimes(stanzaBlob: String) -> (startTime: String, endTime: String) {
         let timeStampPattern = "\\d\\d:\\d\\d:\\d\\d,\\d\\d\\d"
         let timeStampRegex = try! NSRegularExpression(pattern: timeStampPattern,
                                                       options: .caseInsensitive)
@@ -51,6 +62,26 @@ class Stanza {
             
             return time
         }
-        return times
+        return (times[0], times[1])
+    }
+    
+    func scanForLines(splitBlob: [String]) -> [String] {
+        var lines = [String]()
+        for index in 2...(splitBlob.count - 1) {
+            lines.append(splitBlob[index])
+        }
+        return lines
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

@@ -35,4 +35,9 @@ class StanzaTests: XCTestCase {
         XCTAssertEqual(expectedEndTime, stanza.endTime)
     }
     
+    func testStanzaShouldHaveLines() {
+        let expectedLines = ["- But you are a kid, you are 18", "- This is my chance to prove myself."]
+        XCTAssertEqual(expectedLines, stanza.lines)
+    }
+    
 }
