@@ -28,7 +28,8 @@ class Stanza {
     private func splitBlobIntoLines(stanzaBlob: String) -> [String] {
         let santitizedLineBreaks = stanzaBlob.replacingOccurrences(of: "\r", with: "\n")
         let split = santitizedLineBreaks.components(separatedBy: "\n")
-        return split
+        let noBlankLines = removeBlankLines(lines: split)
+        return noBlankLines
     }
     
     private func scanForIndex(stanzaBlob: String) -> Int {
@@ -66,11 +67,22 @@ class Stanza {
     }
     
     func scanForLines(splitBlob: [String]) -> [String] {
+        var noBlankLines = removeBlankLines(lines: splitBlob)
         var lines = [String]()
-        for index in 2...(splitBlob.count - 1) {
-            lines.append(splitBlob[index])
+        for index in 2..<noBlankLines.count {
+            lines.append(noBlankLines[index])
         }
         return lines
+    }
+    
+    func removeBlankLines(lines: [String]) -> [String] {
+        var noBlankLines = [String]()
+        for line in lines {
+            if line != "" {
+                noBlankLines.append(line)
+            }
+        }
+        return noBlankLines
     }
 }
 

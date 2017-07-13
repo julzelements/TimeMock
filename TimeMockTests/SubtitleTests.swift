@@ -11,8 +11,11 @@ import XCTest
 
 class SubtitleTests: XCTestCase {
     
+    var testStanza: Stanza!
+    
     override func setUp() {
         super.setUp()
+        testStanza = Stanza(stanzaBlob: TestConstants.stanzaBlobIndex28.rawValue)
     }
     
     override func tearDown() {
@@ -24,8 +27,8 @@ class SubtitleTests: XCTestCase {
     }
     
     func testSouldReadTestStringFromHelperClass() {
-        let mySimpleTestString = TestConstants().mySimpleTestString
-        XCTAssertEqual("testString", mySimpleTestString)
+        let mySimpleTestString = TestConstants.mySimpleTestString
+        XCTAssertEqual("testString", mySimpleTestString.rawValue)
     }
     
     func testShouldGetTestTextFromTestFileInBundle() {
@@ -35,7 +38,7 @@ class SubtitleTests: XCTestCase {
     
     func testSubsFromBundleShouldEqualSubsInTestConstants() {
         let testString = Subtitle().getRawStringFromFileInBundle(fileName: "spiderman", fileExtension: "srt")
-        let spiderManSRTText = TestConstants().spiderManSRTString
+        let spiderManSRTText = TestConstants.spiderManSRTString.rawValue
         XCTAssertEqual(spiderManSRTText, testString)
     }
     

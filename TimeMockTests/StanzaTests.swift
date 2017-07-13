@@ -15,7 +15,7 @@ class StanzaTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        let stanzaBlob = "28\n00:01:46,120 --> 00:01:49,320\n- But you are a kid, you are 18\n- This is my chance to prove myself."
+        let stanzaBlob = TestConstants.stanzaBlobIndex28.rawValue
         stanza = Stanza(stanzaBlob: stanzaBlob)
     }
     
@@ -36,7 +36,7 @@ class StanzaTests: XCTestCase {
     }
     
     func testStanzaShouldHaveLines() {
-        let expectedLines = ["- But you are a kid, you are 18", "- This is my chance to prove myself."]
+        let expectedLines = ["- But you are a kid.","- This is my chance to prove myself."]
         XCTAssertEqual(expectedLines, stanza.lines)
     }
     
