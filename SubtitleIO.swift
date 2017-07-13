@@ -17,7 +17,7 @@ enum SubtitleIO {
             do {
                 return try String(contentsOf: url, encoding: .utf8)
             } catch {
-                return "could not read contents of URL"
+                return "could not read contents of URL as a string"
             }
             
         }

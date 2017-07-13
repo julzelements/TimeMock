@@ -11,42 +11,18 @@ import XCTest
 
 class SubtitleTests: XCTestCase {
     
-    var testStanza: Stanza!
-    var subtitles: Subtitles!
-    
-    override func setUp() {
-        super.setUp()
-        testStanza = Stanza(stanzaBlob: TestConstants.stanzaBlobIndex28.rawValue)
-        subtitles = Subtitles(rawSRT: TestConstants.spiderManSRTString.rawValue)
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-    }
-    
-    func testInitial() {
-        XCTAssert(true)
-    }
-    
-    func testSouldReadTestStringFromHelperClass() {
-        let mySimpleTestString = TestConstants.mySimpleTestString
-        XCTAssertEqual("testString", mySimpleTestString.rawValue)
-    }
-    
-    func testShouldGetTestTextFromTestFileInBundle() {
-        let testString = SubtitleIO.getRawStringFromFileInBundle(fileName: "test", fileExtension: "txt")
-        XCTAssertEqual("test", testString)
-    }
-    
-    func testSubsFromBundleShouldEqualSubsInTestConstants() {
-        let testString = SubtitleIO.getRawStringFromFileInBundle(fileName: "spiderman", fileExtension: "srt")
-        let spiderManSRTText = TestConstants.spiderManSRTString.rawValue
-        XCTAssertEqual(spiderManSRTText, testString)
-    }
-    
-    func testShouldCreateStanza28Correctly() {
-        
-    }
-    
+//    var testStanza: Stanza!
+//    var subtitles: Subtitles!
+//    
+//    override func setUp() {
+//        super.setUp()
+//        testStanza = Stanza(stanzaBlob: TestConstants.stanzaBlobIndex28.rawValue)
+//        subtitles = Subtitles(rawSRT: TestConstants.spiderManSRTString.rawValue)
+//    }
+//    
+//    func testInitializingSubtitleShouldCreateStanza28Correctly() {
+//        let subtitle = Subtitles.
+//    }
+//    
     
 }

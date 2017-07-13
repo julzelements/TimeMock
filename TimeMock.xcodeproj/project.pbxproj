@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		EC27F7E11F1725960089369F /* SubtitleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC27F7E01F1725960089369F /* SubtitleIO.swift */; };
+		EC298DAF1F1741AB005949E9 /* SubtitleIOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC298DAE1F1741AB005949E9 /* SubtitleIOTests.swift */; };
 		EC2D6B1C1F1395F100CB0FD2 /* Stanza.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B1B1F1395F100CB0FD2 /* Stanza.swift */; };
 		EC2D6B1E1F13965E00CB0FD2 /* spiderman.mov in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B1D1F13965E00CB0FD2 /* spiderman.mov */; };
 		EC2D6B221F13991800CB0FD2 /* SubtitleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B211F13991800CB0FD2 /* SubtitleTests.swift */; };
 		EC2D6B241F1399C100CB0FD2 /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B231F1399C100CB0FD2 /* TestConstants.swift */; };
-		EC2D6B2A1F139E5700CB0FD2 /* Subtitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B291F139E5700CB0FD2 /* Subtitles.swift */; };
+		EC2D6B2A1F139E5700CB0FD2 /* SubtitleMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B291F139E5700CB0FD2 /* SubtitleMaker.swift */; };
 		EC2D6B2F1F14591200CB0FD2 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B2E1F14591200CB0FD2 /* test.txt */; };
 		EC2D6B301F14591200CB0FD2 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B2E1F14591200CB0FD2 /* test.txt */; };
 		EC2D6B321F1460F200CB0FD2 /* spiderman.srt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B311F1460F200CB0FD2 /* spiderman.srt */; };
@@ -42,13 +43,14 @@
 /* Begin PBXFileReference section */
 		EC27F7E01F1725960089369F /* SubtitleIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleIO.swift; sourceTree = "<group>"; };
 		EC27F7E21F1727710089369F /* Initializers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Initializers.playground; sourceTree = "<group>"; };
+		EC298DAE1F1741AB005949E9 /* SubtitleIOTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleIOTests.swift; sourceTree = "<group>"; };
 		EC2D6AEC1F1342AD00CB0FD2 /* AsynchronousPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AsynchronousPlayground.playground; sourceTree = "<group>"; };
 		EC2D6B191F13957E00CB0FD2 /* NSScanner.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NSScanner.playground; sourceTree = "<group>"; };
 		EC2D6B1B1F1395F100CB0FD2 /* Stanza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stanza.swift; sourceTree = "<group>"; };
 		EC2D6B1D1F13965E00CB0FD2 /* spiderman.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = spiderman.mov; sourceTree = "<group>"; };
 		EC2D6B211F13991800CB0FD2 /* SubtitleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleTests.swift; sourceTree = "<group>"; };
 		EC2D6B231F1399C100CB0FD2 /* TestConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
-		EC2D6B291F139E5700CB0FD2 /* Subtitles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subtitles.swift; sourceTree = "<group>"; };
+		EC2D6B291F139E5700CB0FD2 /* SubtitleMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleMaker.swift; sourceTree = "<group>"; };
 		EC2D6B2E1F14591200CB0FD2 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		EC2D6B311F1460F200CB0FD2 /* spiderman.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spiderman.srt; sourceTree = "<group>"; };
 		EC2D6B351F148FFD00CB0FD2 /* StanzaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StanzaTests.swift; sourceTree = "<group>"; };
@@ -103,7 +105,7 @@
 				EC2D6B1D1F13965E00CB0FD2 /* spiderman.mov */,
 				EC2D6B2E1F14591200CB0FD2 /* test.txt */,
 				EC2D6B1B1F1395F100CB0FD2 /* Stanza.swift */,
-				EC2D6B291F139E5700CB0FD2 /* Subtitles.swift */,
+				EC2D6B291F139E5700CB0FD2 /* SubtitleMaker.swift */,
 				EC2D6B311F1460F200CB0FD2 /* spiderman.srt */,
 				EC27F7E01F1725960089369F /* SubtitleIO.swift */,
 			);
@@ -154,6 +156,7 @@
 				EC2D6B211F13991800CB0FD2 /* SubtitleTests.swift */,
 				EC2D6B231F1399C100CB0FD2 /* TestConstants.swift */,
 				EC2D6B351F148FFD00CB0FD2 /* StanzaTests.swift */,
+				EC298DAE1F1741AB005949E9 /* SubtitleIOTests.swift */,
 			);
 			path = TimeMockTests;
 			sourceTree = "<group>";
@@ -283,10 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECD64A731F0A4536004BFA93 /* TimeMockTests.swift in Sources */,
-				EC2D6B2A1F139E5700CB0FD2 /* Subtitles.swift in Sources */,
+				EC2D6B2A1F139E5700CB0FD2 /* SubtitleMaker.swift in Sources */,
 				EC2D6B371F148FFD00CB0FD2 /* StanzaTests.swift in Sources */,
 				EC2D6B241F1399C100CB0FD2 /* TestConstants.swift in Sources */,
 				EC2D6B221F13991800CB0FD2 /* SubtitleTests.swift in Sources */,
+				EC298DAF1F1741AB005949E9 /* SubtitleIOTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

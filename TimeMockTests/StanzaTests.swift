@@ -20,7 +20,6 @@ class StanzaTests: XCTestCase {
     }
     
     func testStanzaShouldHaveIndexOf28() {
-        
         let expectedIndex: Int = 28
         XCTAssertEqual(expectedIndex, stanza.index)
     }
