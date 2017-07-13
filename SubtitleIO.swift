@@ -1,17 +1,16 @@
 //
-//  Subtitle.swift
+//  SubtitleIO.swift
 //  TimeMock
 //
-//  Created by Julian Scharf on 10/7/17.
+//  Created by Julian Scharf on 13/7/17.
 //  Copyright © 2017 Julian Scharf. All rights reserved.
 //
 
 import UIKit
 
-class Subtitle: NSObject {
+enum SubtitleIO {
     
-    
-    func getRawStringFromFileInBundle(fileName: String, fileExtension: String) -> String {
+    static func getRawStringFromFileInBundle(fileName: String, fileExtension: String) -> String {
         let bundle = Bundle.main
         if let url = bundle.url(forResource: fileName, withExtension: fileExtension) {
             
