@@ -25,4 +25,37 @@ enum SubtitleMaker {
     static func sanitizeLineBreaks(rawSRTString: String) -> String {
         return rawSRTString.replacingOccurrences(of: "\r", with: "\n")
     }
+    
+    static func getEvents(subs: [Int: Stanza]) -> [SubtitleEvent] {
+        var events = [SubtitleEvent]()
+        for sub in subs {
+            let lines = sub.value.lines.joined(separator: "\n")
+            let startEvent = SubtitleEvent(time: sub.value.startTime, text: lines)
+            events.append(startEvent)
+            let endEvent = SubtitleEvent(time: sub.value.endTime, text: "")
+            events.append(endEvent)
+        }
+        return events
+    }
+    
+}
+
+struct SubtitleEvent: Hashable, Equatable {
+    var time: Double
+    var text: String
+    var hashValue: Int {
+        get {
+            return "\(self.time),\(self.text)".hashValue
+        }
+    }
+    
+    init(time: Double, text: String) {
+        self.time = time
+        self.text = text
+    }
+    
+    static func ==(lhs: SubtitleEvent, rhs: SubtitleEvent) -> Bool {
+        return lhs.time == rhs.time &&
+            rhs.text == lhs.text
+    }
 }

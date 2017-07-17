@@ -25,12 +25,14 @@ class StanzaTests: XCTestCase {
     }
     
     func testStanzaShouldHaveStartTime() {
-        let expectedStartTime = "00:01:46,120"
+        let stanzaBlob = TestConstants.stanzaBlobIndex28.rawValue
+        stanza = Stanza(stanzaBlob: stanzaBlob)
+        let expectedStartTime = 60.0 + 46.0 + 0.120 //"00:01:46,120"
         XCTAssertEqual(expectedStartTime, stanza.startTime)
     }
     
     func testStanzaShouldHaveEndTime() {
-        let expectedEndTime = "00:01:49,320"
+        let expectedEndTime = 60.0 + 49.0 + 0.320 //"00:01:49,320"
         XCTAssertEqual(expectedEndTime, stanza.endTime)
     }
     

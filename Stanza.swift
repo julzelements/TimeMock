@@ -11,8 +11,8 @@ import Foundation
 class Stanza {
     
     var index: Int!
-    var startTime: String!
-    var endTime: String!
+    var startTime: Double!
+    var endTime: Double!
     var lines: [String]!
     var splitBlob: [String]!
     var hashValue: Int {
@@ -24,9 +24,9 @@ class Stanza {
     init(stanzaBlob: String) {
         splitBlob = splitBlobIntoLines(stanzaBlob: stanzaBlob)
         index = scanForIndex(stanzaBlob: splitBlob[0])
-        let tupleOfTimes = scanForTimes(stanzaBlob: splitBlob[1])
-        startTime = tupleOfTimes.startTime
-        endTime = tupleOfTimes.endTime
+        let Times = scanForTimes(stanzaBlob: splitBlob[1])
+        startTime = Times.startTime
+        endTime = Times.endTime
         lines = scanForLines(splitBlob: splitBlob)
         
     }
@@ -60,7 +60,7 @@ class Stanza {
         }
     }
     
-    private func scanForTimes(stanzaBlob: String) -> (startTime: String, endTime: String) {
+    private func scanForTimes(stanzaBlob: String) -> (startTime: Double, endTime: Double) {
         let timeStampPattern = "\\d\\d:\\d\\d:\\d\\d,\\d\\d\\d"
         let timeStampRegex = try! NSRegularExpression(pattern: timeStampPattern,
                                                       options: .caseInsensitive)
@@ -68,13 +68,13 @@ class Stanza {
         let matches = timeStampRegex.matches(in: stanzaBlob,
                                              range: NSMakeRange(0, stanzaBlob.utf16.count))
         
-        let times = matches.map { result -> String in
+        let times = matches.map { result -> Double in
             let timesRange = result.rangeAt(0)
             let start = String.UTF16Index(timesRange.location)
             let end = String.UTF16Index(timesRange.location + timesRange.length)
             let time = String(stanzaBlob.utf16[start..<end])!
             
-            return time
+            return convertSRTTimeToDouble(SRTTime: time)
         }
         return (times[0], times[1])
     }
@@ -96,5 +96,19 @@ class Stanza {
             }
         }
         return noBlankLines
+    }
+    
+    func convertSRTTimeToDouble(SRTTime: String) -> Double {
+        var timeDouble = Double()
+        let timeWithNoColon = SRTTime.replacingOccurrences(of: ",", with: ":")
+        let timeArray = timeWithNoColon.components(separatedBy: ":")
+        if timeArray.count == 4 {
+            let hours = Double(timeArray[0])
+            let minutes = Double(timeArray[1])
+            let seconds = Double(timeArray[2])
+            let milliseconds = Double(timeArray[3])
+            timeDouble = (hours! * 3600.0) + (minutes! * 60.0) + (seconds!) + (milliseconds! / 1000.0)
+        }
+        return timeDouble
     }
 }
