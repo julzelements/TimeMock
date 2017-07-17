@@ -11,18 +11,19 @@ import XCTest
 
 class SubtitleTests: XCTestCase {
     
-//    var testStanza: Stanza!
-//    var subtitles: Subtitles!
-//    
-//    override func setUp() {
-//        super.setUp()
-//        testStanza = Stanza(stanzaBlob: TestConstants.stanzaBlobIndex28.rawValue)
-//        subtitles = Subtitles(rawSRT: TestConstants.spiderManSRTString.rawValue)
-//    }
-//    
-//    func testInitializingSubtitleShouldCreateStanza28Correctly() {
-//        let subtitle = Subtitles.
-//    }
-//    
+    var testStanza28: Stanza!
+    var subtitles: [Int: Stanza]!
+    
+    override func setUp() {
+        super.setUp()
+        testStanza28 = Stanza(stanzaBlob: TestConstants.stanzaBlobIndex28.rawValue)
+        subtitles = SubtitleMaker.makeSubs(rawSRTString: TestConstants.spiderManSRTStringWithLineReturns.rawValue)
+    }
+    
+    func testInitializingSubtitleShouldCreateStanza28Correctly() {
+        let stanza28 = subtitles[28]
+        XCTAssertTrue(stanza28! == testStanza28)
+    }
+    
     
 }

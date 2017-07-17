@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func go(_ sender: Any) {
-        for index in 1...1000 {
+        for index in 1...100000000 {
             let offset = Double(index)
             makeATimer(offset: offset)
         }
