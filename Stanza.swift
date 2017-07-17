@@ -15,6 +15,11 @@ class Stanza {
     var endTime: String!
     var lines: [String]!
     var splitBlob: [String]!
+    var hashValue: Int {
+        get {
+            return "\(self.index),\(self.startTime),\(self.endTime),\(self.lines)".hashValue
+        }
+    }
     
     init(stanzaBlob: String) {
         splitBlob = splitBlobIntoLines(stanzaBlob: stanzaBlob)
@@ -23,6 +28,14 @@ class Stanza {
         startTime = tupleOfTimes.startTime
         endTime = tupleOfTimes.endTime
         lines = scanForLines(splitBlob: splitBlob)
+        
+    }
+    
+    static func ==(lhs: Stanza, rhs: Stanza) -> Bool {
+        return lhs.index == rhs.index &&
+        lhs.startTime == rhs.startTime &&
+        lhs.endTime == rhs.endTime &&
+        lhs.lines == rhs.lines
     }
     
     private func splitBlobIntoLines(stanzaBlob: String) -> [String] {
@@ -85,15 +98,3 @@ class Stanza {
         return noBlankLines
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
