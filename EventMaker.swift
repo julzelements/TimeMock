@@ -1,5 +1,5 @@
 //
-//  SubtitleMaker.swift
+//  EventMaker.swift
 //  TimeMock
 //
 //  Created by Julian Scharf on 10/7/17.
@@ -9,33 +9,23 @@
 import UIKit
 
 enum EventMaker {
-    static func makeSubs(rawSRTString: String) -> [Int: Stanza] {
+    static func getEvents(rawSRTString: String) -> [SubtitleEvent] {
         let sanitizedSRT = sanitizeLineBreaks(rawSRTString: rawSRTString)
         let stanzaBlobs = sanitizedSRT.components(separatedBy: "\n\n")
-        var subtitles = [Int: Stanza]()
+        var events = [SubtitleEvent]()
         for stanzaBlob in stanzaBlobs {
             let stanza = Stanza(stanzaBlob: stanzaBlob)
-            if let index = stanza.index {
-                subtitles[index] = stanza
-            }
+            let lines = stanza.lines.joined(separator: "\n")
+            let startTime = stanza.startTime
+            let endTime = stanza.endTime
+            events.append(SubtitleEvent(time: startTime!, text: lines))
+            events.append(SubtitleEvent(time: endTime!, text: ""))
         }
-        return subtitles
+        return events
     }
     
     static func sanitizeLineBreaks(rawSRTString: String) -> String {
         return rawSRTString.replacingOccurrences(of: "\r", with: "\n")
     }
-    
-    static func getEvents(subs: [Int: Stanza]) -> [SubtitleEvent] {
-        var events = [SubtitleEvent]()
-        for sub in subs {
-            let lines = sub.value.lines.joined(separator: "\n")
-            let startEvent = SubtitleEvent(time: sub.value.startTime, text: lines)
-            events.append(startEvent)
-            let endEvent = SubtitleEvent(time: sub.value.endTime, text: "")
-            events.append(endEvent)
-        }
-        return events
-    }
-    
+        
 }

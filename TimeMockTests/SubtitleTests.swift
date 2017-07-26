@@ -18,13 +18,7 @@ class SubtitleTests: XCTestCase {
     override func setUp() {
         super.setUp()
         testStanza28 = Stanza(stanzaBlob: TestConstants.stanzaBlobIndex28.rawValue)
-        subtitles = SubtitleMaker.makeSubs(rawSRTString: TestConstants.spiderManSRTStringWithLineReturns.rawValue)
-        events = SubtitleMaker.getEvents(subs: subtitles)
-    }
-    
-    func testInitializingSubtitleShouldCreateStanza28Correctly() {
-        let stanza28 = subtitles[28]
-        XCTAssertTrue(stanza28! == testStanza28)
+        events = EventMaker.getEvents(rawSRTString: TestConstants.spiderManSRTStringWithLineReturns.rawValue)
     }
     
     func testEventMakerShouldCreateEndEventForStanza28() {
@@ -37,6 +31,12 @@ class SubtitleTests: XCTestCase {
         let startTime = 60.0 + 46.0 + 0.120 //"00:01:46,120"
         let startEvent = SubtitleEvent(time: startTime, text: "- But you are a kid.\n- This is my chance to prove myself.")
         XCTAssert(events.contains(startEvent))
+    }
+    
+    func testEventMakerShouldCreateEvent0atIndex0() {
+        let eventZeroTime = 1.10 //00:00:01,100
+        let eventZero = SubtitleEvent(time: eventZeroTime, text: "'Sup, guys?")
+        XCTAssertEqual(events[0], eventZero)
     }
     
     

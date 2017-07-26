@@ -8,6 +8,8 @@
 
 import UIKit
 import Foundation
+import AVKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -16,6 +18,7 @@ class ViewController: UIViewController {
     var events: [SubtitleEvent]!
     var globalTime: Date!
     
+    @IBOutlet weak var subsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,15 +33,13 @@ class ViewController: UIViewController {
         let currentIndex = timer.userInfo as! Int
         let currentEvent = events[currentIndex]
         
-        print("\n==================")
-        print(currentEvent.text)
-        print(currentEvent.time)
-        print("\n==================")
+        let sub = "\(currentEvent.text)\n\(currentEvent.time)"
+        subsLabel.text = sub
         
-        if currentIndex <= events.count {
+        if currentIndex <= events.count - 1  {
             let nextIndex = currentIndex + 1
             let nextEvent = events[currentIndex + 1]
-            makeATimer(offset: nextEvent.time, eventIndex: nextIndex + 1)
+            makeATimer(offset: nextEvent.time, eventIndex: nextIndex)
         }
 
         
@@ -51,9 +52,9 @@ class ViewController: UIViewController {
     }
     
     func getEvents() -> [SubtitleEvent] {
-        let rawSubs = SubtitleIO.getRawStringFromFileInBundle(fileName: "test", fileExtension: "srt")
-        let subs = SubtitleMaker.makeSubs(rawSRTString: rawSubs)
-        return SubtitleMaker.getEvents(subs: subs)
+        let rawSubs = SubtitleIO.getRawStringFromFileInBundle(fileName: "spiderman", fileExtension: "srt")
+        return EventMaker.getEvents(rawSRTString: rawSubs)
     }
+
 }
 
