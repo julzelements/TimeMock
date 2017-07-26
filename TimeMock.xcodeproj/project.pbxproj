@@ -19,6 +19,8 @@
 		EC2D6B321F1460F200CB0FD2 /* spiderman.srt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B311F1460F200CB0FD2 /* spiderman.srt */; };
 		EC2D6B331F1460F200CB0FD2 /* spiderman.srt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B311F1460F200CB0FD2 /* spiderman.srt */; };
 		EC2D6B371F148FFD00CB0FD2 /* StanzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B351F148FFD00CB0FD2 /* StanzaTests.swift */; };
+		ECBA5E1A1F281ECA001A644C /* SubtitleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBA5E191F281ECA001A644C /* SubtitleEvent.swift */; };
+		ECBA5E1E1F284FFA001A644C /* test.srt in Resources */ = {isa = PBXBuildFile; fileRef = ECBA5E1D1F284FFA001A644C /* test.srt */; };
 		ECD64A5E1F0A4536004BFA93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD64A5D1F0A4536004BFA93 /* AppDelegate.swift */; };
 		ECD64A601F0A4536004BFA93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD64A5F1F0A4536004BFA93 /* ViewController.swift */; };
 		ECD64A631F0A4536004BFA93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD64A611F0A4536004BFA93 /* Main.storyboard */; };
@@ -48,6 +50,8 @@
 		EC2D6B2E1F14591200CB0FD2 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		EC2D6B311F1460F200CB0FD2 /* spiderman.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spiderman.srt; sourceTree = "<group>"; };
 		EC2D6B351F148FFD00CB0FD2 /* StanzaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StanzaTests.swift; sourceTree = "<group>"; };
+		ECBA5E191F281ECA001A644C /* SubtitleEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleEvent.swift; sourceTree = "<group>"; };
+		ECBA5E1D1F284FFA001A644C /* test.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.srt; sourceTree = "<group>"; };
 		ECD64A5A1F0A4536004BFA93 /* TimeMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD64A5D1F0A4536004BFA93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECD64A5F1F0A4536004BFA93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,10 +94,12 @@
 			children = (
 				EC2D6B1D1F13965E00CB0FD2 /* spiderman.mov */,
 				EC2D6B2E1F14591200CB0FD2 /* test.txt */,
+				ECBA5E1D1F284FFA001A644C /* test.srt */,
 				EC2D6B1B1F1395F100CB0FD2 /* Stanza.swift */,
 				EC2D6B291F139E5700CB0FD2 /* SubtitleMaker.swift */,
 				EC2D6B311F1460F200CB0FD2 /* spiderman.srt */,
 				EC27F7E01F1725960089369F /* SubtitleIO.swift */,
+				ECBA5E191F281ECA001A644C /* SubtitleEvent.swift */,
 			);
 			name = Subtitles;
 			sourceTree = "<group>";
@@ -231,6 +237,7 @@
 				ECD64A681F0A4536004BFA93 /* LaunchScreen.storyboard in Resources */,
 				EC2D6B321F1460F200CB0FD2 /* spiderman.srt in Resources */,
 				ECD64A651F0A4536004BFA93 /* Assets.xcassets in Resources */,
+				ECBA5E1E1F284FFA001A644C /* test.srt in Resources */,
 				ECD64A631F0A4536004BFA93 /* Main.storyboard in Resources */,
 				EC2D6B2F1F14591200CB0FD2 /* test.txt in Resources */,
 				EC2D6B1E1F13965E00CB0FD2 /* spiderman.mov in Resources */,
@@ -255,6 +262,7 @@
 			files = (
 				EC28BB0F1F1C7C0900804EA0 /* Stanza.swift in Sources */,
 				EC27F7E11F1725960089369F /* SubtitleIO.swift in Sources */,
+				ECBA5E1A1F281ECA001A644C /* SubtitleEvent.swift in Sources */,
 				EC28BB0C1F1C7B6F00804EA0 /* SubtitleMaker.swift in Sources */,
 				ECD64A601F0A4536004BFA93 /* ViewController.swift in Sources */,
 				ECD64A5E1F0A4536004BFA93 /* AppDelegate.swift in Sources */,
