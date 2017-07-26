@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum SubtitleMaker {
+enum EventMaker {
     static func makeSubs(rawSRTString: String) -> [Int: Stanza] {
         let sanitizedSRT = sanitizeLineBreaks(rawSRTString: rawSRTString)
         let stanzaBlobs = sanitizedSRT.components(separatedBy: "\n\n")
