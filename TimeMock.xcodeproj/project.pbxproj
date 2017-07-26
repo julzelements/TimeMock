@@ -19,15 +19,11 @@
 		EC2D6B321F1460F200CB0FD2 /* spiderman.srt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B311F1460F200CB0FD2 /* spiderman.srt */; };
 		EC2D6B331F1460F200CB0FD2 /* spiderman.srt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B311F1460F200CB0FD2 /* spiderman.srt */; };
 		EC2D6B371F148FFD00CB0FD2 /* StanzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B351F148FFD00CB0FD2 /* StanzaTests.swift */; };
-		EC5681981F10F64A00C139CE /* MyTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5681971F10F64A00C139CE /* MyTime.swift */; };
-		EC56819A1F10FFB200C139CE /* MyTimeDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5681991F10FFB200C139CE /* MyTimeDummy.swift */; };
 		ECD64A5E1F0A4536004BFA93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD64A5D1F0A4536004BFA93 /* AppDelegate.swift */; };
 		ECD64A601F0A4536004BFA93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD64A5F1F0A4536004BFA93 /* ViewController.swift */; };
 		ECD64A631F0A4536004BFA93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD64A611F0A4536004BFA93 /* Main.storyboard */; };
 		ECD64A651F0A4536004BFA93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECD64A641F0A4536004BFA93 /* Assets.xcassets */; };
 		ECD64A681F0A4536004BFA93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD64A661F0A4536004BFA93 /* LaunchScreen.storyboard */; };
-		ECD64A731F0A4536004BFA93 /* TimeMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD64A721F0A4536004BFA93 /* TimeMockTests.swift */; };
-		ECD64A7E1F0A4552004BFA93 /* ITime.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD64A7D1F0A4552004BFA93 /* ITime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +40,6 @@
 		EC27F7E01F1725960089369F /* SubtitleIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleIO.swift; sourceTree = "<group>"; };
 		EC27F7E21F1727710089369F /* Initializers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Initializers.playground; sourceTree = "<group>"; };
 		EC298DAE1F1741AB005949E9 /* SubtitleIOTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleIOTests.swift; sourceTree = "<group>"; };
-		EC2D6AEC1F1342AD00CB0FD2 /* AsynchronousPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AsynchronousPlayground.playground; sourceTree = "<group>"; };
-		EC2D6B191F13957E00CB0FD2 /* NSScanner.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NSScanner.playground; sourceTree = "<group>"; };
 		EC2D6B1B1F1395F100CB0FD2 /* Stanza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stanza.swift; sourceTree = "<group>"; };
 		EC2D6B1D1F13965E00CB0FD2 /* spiderman.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = spiderman.mov; sourceTree = "<group>"; };
 		EC2D6B211F13991800CB0FD2 /* SubtitleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleTests.swift; sourceTree = "<group>"; };
@@ -54,8 +48,6 @@
 		EC2D6B2E1F14591200CB0FD2 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		EC2D6B311F1460F200CB0FD2 /* spiderman.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spiderman.srt; sourceTree = "<group>"; };
 		EC2D6B351F148FFD00CB0FD2 /* StanzaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StanzaTests.swift; sourceTree = "<group>"; };
-		EC5681971F10F64A00C139CE /* MyTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTime.swift; sourceTree = "<group>"; };
-		EC5681991F10FFB200C139CE /* MyTimeDummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTimeDummy.swift; sourceTree = "<group>"; };
 		ECD64A5A1F0A4536004BFA93 /* TimeMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD64A5D1F0A4536004BFA93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECD64A5F1F0A4536004BFA93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,10 +56,7 @@
 		ECD64A671F0A4536004BFA93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECD64A691F0A4536004BFA93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECD64A6E1F0A4536004BFA93 /* TimeMockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeMockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECD64A721F0A4536004BFA93 /* TimeMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMockTests.swift; sourceTree = "<group>"; };
 		ECD64A741F0A4536004BFA93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECD64A7D1F0A4552004BFA93 /* ITime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ITime.swift; sourceTree = "<group>"; };
-		ECD64A7F1F0F4E46004BFA93 /* TimeInterval.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = TimeInterval.playground; path = TimeMock/TimeInterval.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +80,6 @@
 		EC2D6AEB1F13428300CB0FD2 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				ECD64A7F1F0F4E46004BFA93 /* TimeInterval.playground */,
-				EC2D6AEC1F1342AD00CB0FD2 /* AsynchronousPlayground.playground */,
-				EC2D6B191F13957E00CB0FD2 /* NSScanner.playground */,
 				EC27F7E21F1727710089369F /* Initializers.playground */,
 			);
 			name = Playgrounds;
@@ -141,9 +127,6 @@
 				ECD64A641F0A4536004BFA93 /* Assets.xcassets */,
 				ECD64A661F0A4536004BFA93 /* LaunchScreen.storyboard */,
 				ECD64A691F0A4536004BFA93 /* Info.plist */,
-				ECD64A7D1F0A4552004BFA93 /* ITime.swift */,
-				EC5681971F10F64A00C139CE /* MyTime.swift */,
-				EC5681991F10FFB200C139CE /* MyTimeDummy.swift */,
 			);
 			path = TimeMock;
 			sourceTree = "<group>";
@@ -151,7 +134,6 @@
 		ECD64A711F0A4536004BFA93 /* TimeMockTests */ = {
 			isa = PBXGroup;
 			children = (
-				ECD64A721F0A4536004BFA93 /* TimeMockTests.swift */,
 				ECD64A741F0A4536004BFA93 /* Info.plist */,
 				EC2D6B211F13991800CB0FD2 /* SubtitleTests.swift */,
 				EC2D6B231F1399C100CB0FD2 /* TestConstants.swift */,
@@ -274,11 +256,8 @@
 				EC28BB0F1F1C7C0900804EA0 /* Stanza.swift in Sources */,
 				EC27F7E11F1725960089369F /* SubtitleIO.swift in Sources */,
 				EC28BB0C1F1C7B6F00804EA0 /* SubtitleMaker.swift in Sources */,
-				EC56819A1F10FFB200C139CE /* MyTimeDummy.swift in Sources */,
-				EC5681981F10F64A00C139CE /* MyTime.swift in Sources */,
 				ECD64A601F0A4536004BFA93 /* ViewController.swift in Sources */,
 				ECD64A5E1F0A4536004BFA93 /* AppDelegate.swift in Sources */,
-				ECD64A7E1F0A4552004BFA93 /* ITime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +265,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECD64A731F0A4536004BFA93 /* TimeMockTests.swift in Sources */,
 				EC2D6B371F148FFD00CB0FD2 /* StanzaTests.swift in Sources */,
 				EC2D6B241F1399C100CB0FD2 /* TestConstants.swift in Sources */,
 				EC2D6B221F13991800CB0FD2 /* SubtitleTests.swift in Sources */,
