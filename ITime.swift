@@ -9,5 +9,5 @@
 import Foundation
 
 protocol ITime {
-    var timeIntervalSinceReferenceDate: Double { get }
+    var systemTime: Double { get }
 }

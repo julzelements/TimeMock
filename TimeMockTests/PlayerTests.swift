@@ -40,11 +40,11 @@ class PlayerTests: XCTestCase {
         super.setUp()
         let rawString = SubtitleIO.getRawStringFromFileInBundle(fileName: "test", fileExtension: "srt")
         events = EventMaker.getEvents(rawSRTString: rawString)
-        timeDouble = TimeDouble(timeIntervalSinceReferenceDate: 1700.0)
+        timeDouble = TimeDouble(systemTime: 1700.0)
         player = Player(apiSystemTime: 1691.5 , apiMovieTime: 16.0, arrayOfEvents: events, time: timeDouble)
     }
     
-    func test_givenThatCurrentTimeIs1700MovieTimeSHouldbe71() {
+    func test_givenThatSystemTimeIs1700MovieTimeSHouldbe24point5() {
         //The Api was called when the system time was 1681 seconds
         //The Api returned a value of 21 seconds
         let calculatedMovieTime = player.currentMovieTime
@@ -60,6 +60,14 @@ class PlayerTests: XCTestCase {
     
     func testTimeIntervalToNextSubtitleShouldBe0point5() {
         let expected = 0.5
+        let calculatedInterval = player.timeIntervalToNextSubtitle
+        XCTAssertEqual(expected, calculatedInterval)
+    }
+    
+    func testUpdatePlayerWithSystemTimeOf1700point5shouldgiveIntervalToNextSubtitleOfOne() {
+        timeDouble = TimeDouble(systemTime: 1700.5)
+        player.updatePlayer(time: timeDouble)
+        let expected = 1.0
         let calculatedInterval = player.timeIntervalToNextSubtitle
         XCTAssertEqual(expected, calculatedInterval)
     }

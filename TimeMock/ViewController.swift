@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var accuracyResults: [Double]!
     var events: [SubtitleEvent]!
     var globalTime: Date!
+    var player: Player!
     
     @IBOutlet weak var subsLabel: UILabel!
     
@@ -56,9 +57,6 @@ class ViewController: UIViewController {
         RunLoop.current.add(timer, forMode: .defaultRunLoopMode)
     }
     
-//    func makeARepeatingTimer() {
-//        let repeater = Timer(timeInterval: 1, repeats: true, block: <#T##(Timer) -> Void#>)
-//    }
     
     func getEvents() -> [SubtitleEvent] {
         let rawSubs = SubtitleIO.getRawStringFromFileInBundle(fileName: "test", fileExtension: "srt")

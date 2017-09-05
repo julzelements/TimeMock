@@ -9,7 +9,6 @@
 import UIKit
 
 class Player {
-    
     var apiSystemTime: Double!
     var apiMovieTime: Double!
     var events: [SubtitleEvent]!
@@ -24,11 +23,11 @@ class Player {
         self.apiMovieTime = apiMovieTime
         self.events = arrayOfEvents
         self.time = time
-        preparePlayer(time: self.time)
+        updatePlayer(time: self.time)
     }
     
     private func getCurrentMovieTime() -> Double {
-        return time.timeIntervalSinceReferenceDate - apiSystemTime + apiMovieTime
+        return time.systemTime - apiSystemTime + apiMovieTime
     }
     
     private func getCurrentSubtitleIndex() -> Int {
@@ -46,7 +45,8 @@ class Player {
         return nextSubtitleMovieTime - currentMovieTime
     }
     
-    func preparePlayer(time: ITime) {
+    func updatePlayer(time: ITime) {
+        self.time = time
         currentMovieTime = getCurrentMovieTime()
         currentSubtitleIndex = getCurrentSubtitleIndex()
         timeIntervalToNextSubtitle = getTimeIntervalToNextSubtitle()

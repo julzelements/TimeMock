@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 
 class MyTime: ITime {
-    var timeIntervalSinceReferenceDate: Double {
+    var systemTime: Double {
         get {
             return Date.timeIntervalSinceReferenceDate
         }

@@ -9,5 +9,5 @@
 import UIKit
 
 struct TimeDouble: ITime {
-    var timeIntervalSinceReferenceDate: Double
+    var systemTime: Double
 }
