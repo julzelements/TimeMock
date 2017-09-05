@@ -60,23 +60,29 @@ class Stanza {
         }
     }
     
-    private func scanForTimes(stanzaBlob: String) -> (startTime: Double, endTime: Double) {
-        let timeStampPattern = "\\d\\d:\\d\\d:\\d\\d,\\d\\d\\d"
-        let timeStampRegex = try! NSRegularExpression(pattern: timeStampPattern,
-                                                      options: .caseInsensitive)
-        
-        let matches = timeStampRegex.matches(in: stanzaBlob,
-                                             range: NSMakeRange(0, stanzaBlob.utf16.count))
-        
-        let times = matches.map { result -> Double in
-            let timesRange = result.rangeAt(0)
-            let start = String.UTF16Index(timesRange.location)
-            let end = String.UTF16Index(timesRange.location + timesRange.length)
-            let time = String(stanzaBlob.utf16[start..<end])!
-            
-            return convertSRTTimeToDouble(SRTTime: time)
+    func extractTimeChunks(stanzaBlob: String) -> (startChunk: String, endChunk: String)? {
+        let split = stanzaBlob.components(separatedBy: "-->")
+        if split.count == 2 {
+            let startChunk = split[0]
+            let endChunk = split[1]
+            return (startChunk, endChunk)
         }
-        return (times[0], times[1])
+        return nil
+    }
+    
+    func extractTime(timeChunk: String) -> String? {
+        let timeStampPattern = "\\d\\d:\\d\\d:\\d\\d,\\d\\d\\d"
+        if let timeRange = timeChunk.range(of: timeStampPattern, options: .regularExpression) {
+            return String(timeChunk[timeRange])
+        }
+        return nil
+    }
+    
+    private func scanForTimes(stanzaBlob: String) -> (startTime: Double, endTime: Double) {
+        let timeChunks = extractTimeChunks(stanzaBlob: stanzaBlob)!
+        let start = convertSRTTimeToDouble(SRTTime: extractTime(timeChunk: timeChunks.startChunk)!)
+        let end = convertSRTTimeToDouble(SRTTime: extractTime(timeChunk: timeChunks.endChunk)!)
+        return (start, end)
     }
     
     func scanForLines(splitBlob: [String]) -> [String] {

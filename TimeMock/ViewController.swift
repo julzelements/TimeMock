@@ -27,9 +27,19 @@ class ViewController: UIViewController {
         events = getEvents()
         makeATimer(offset: 1.0, eventIndex: 0)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        globalTime = Date()
+        print("Global start time: \(globalTime)")
+        events = getEvents()
+        makeATimer(offset: 0, eventIndex: 0)
+        playWithAVPlayer()
+        
+    }
 
     
-    func updateLabel() {
+    @objc func updateLabel() {
         let currentIndex = timer.userInfo as! Int
         let currentEvent = events[currentIndex]
         
@@ -54,6 +64,23 @@ class ViewController: UIViewController {
     func getEvents() -> [SubtitleEvent] {
         let rawSubs = SubtitleIO.getRawStringFromFileInBundle(fileName: "spiderman", fileExtension: "srt")
         return EventMaker.getEvents(rawSRTString: rawSubs)
+    }
+    
+    func getRawURLFromFileInBundle(fileName: String, fileExtension: String) -> URL {
+        let bundle = Bundle.main
+        return bundle.url(forResource: fileName, withExtension: fileExtension)!
+    }
+    
+    func playWithAVPlayer() {
+        let videoURL = getRawURLFromFileInBundle(fileName: "spiderman", fileExtension: "mov")
+        let player = AVPlayer(url: videoURL)
+        let playerLayer = AVPlayerLayer(player: player)
+        
+        let frame = CGRect(x: 100, y: 100, width: 100, height: 100)
+        
+        playerLayer.frame = frame
+        self.view.layer.addSublayer(playerLayer)
+        player.play()
     }
 
 }

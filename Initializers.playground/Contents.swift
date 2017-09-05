@@ -112,7 +112,7 @@ class Stanza {
                                              range: NSMakeRange(0, stanzaBlob.utf16.count))
         
         let times = matches.map { result -> Double in
-            let timesRange = result.rangeAt(0)
+            let timesRange = result.range(at: 0)
             let start = String.UTF16Index(timesRange.location)
             let end = String.UTF16Index(timesRange.location + timesRange.length)
             let time = String(stanzaBlob.utf16[start..<end])!
