@@ -28,7 +28,6 @@ class Stanza {
         startTime = Times.startTime
         endTime = Times.endTime
         lines = scanForLines(splitBlob: splitBlob)
-        
     }
     
     static func ==(lhs: Stanza, rhs: Stanza) -> Bool {

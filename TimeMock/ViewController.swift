@@ -20,21 +20,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var subsLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        globalTime = Date()
-        print("Global start time: \(globalTime)")
-        events = getEvents()
-        makeATimer(offset: 1.0, eventIndex: 0)
-    }
-    
+   
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         globalTime = Date()
         print("Global start time: \(globalTime)")
         events = getEvents()
         makeATimer(offset: 0, eventIndex: 0)
-        playWithAVPlayer()
+//        playWithAVPlayer()
         
     }
 
@@ -51,6 +44,8 @@ class ViewController: UIViewController {
             let nextEvent = events[currentIndex + 1]
             makeATimer(offset: nextEvent.time, eventIndex: nextIndex)
         }
+        print("time \(currentEvent.time)")
+        print("index \(currentIndex)")
 
         
     }
@@ -61,8 +56,12 @@ class ViewController: UIViewController {
         RunLoop.current.add(timer, forMode: .defaultRunLoopMode)
     }
     
+//    func makeARepeatingTimer() {
+//        let repeater = Timer(timeInterval: 1, repeats: true, block: <#T##(Timer) -> Void#>)
+//    }
+    
     func getEvents() -> [SubtitleEvent] {
-        let rawSubs = SubtitleIO.getRawStringFromFileInBundle(fileName: "spiderman", fileExtension: "srt")
+        let rawSubs = SubtitleIO.getRawStringFromFileInBundle(fileName: "test", fileExtension: "srt")
         return EventMaker.getEvents(rawSRTString: rawSubs)
     }
     

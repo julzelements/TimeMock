@@ -11,6 +11,11 @@
 		EC28BB0C1F1C7B6F00804EA0 /* EventMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B291F139E5700CB0FD2 /* EventMaker.swift */; };
 		EC28BB0F1F1C7C0900804EA0 /* Stanza.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B1B1F1395F100CB0FD2 /* Stanza.swift */; };
 		EC298DAF1F1741AB005949E9 /* SubtitleIOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC298DAE1F1741AB005949E9 /* SubtitleIOTests.swift */; };
+		EC2C11821F5E707600C823E0 /* ITime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C11811F5E707600C823E0 /* ITime.swift */; };
+		EC2C11841F5E732000C823E0 /* TimeDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C11831F5E732000C823E0 /* TimeDouble.swift */; };
+		EC2C11851F5E743500C823E0 /* ITime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C11811F5E707600C823E0 /* ITime.swift */; };
+		EC2C11871F5E748300C823E0 /* MyTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C11861F5E748300C823E0 /* MyTime.swift */; };
+		EC2C11891F5E7A4A00C823E0 /* MyTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C11861F5E748300C823E0 /* MyTime.swift */; };
 		EC2D6B1E1F13965E00CB0FD2 /* spiderman.mov in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B1D1F13965E00CB0FD2 /* spiderman.mov */; };
 		EC2D6B221F13991800CB0FD2 /* SubtitleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B211F13991800CB0FD2 /* SubtitleTests.swift */; };
 		EC2D6B241F1399C100CB0FD2 /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B231F1399C100CB0FD2 /* TestConstants.swift */; };
@@ -19,8 +24,19 @@
 		EC2D6B321F1460F200CB0FD2 /* spiderman.srt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B311F1460F200CB0FD2 /* spiderman.srt */; };
 		EC2D6B331F1460F200CB0FD2 /* spiderman.srt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B311F1460F200CB0FD2 /* spiderman.srt */; };
 		EC2D6B371F148FFD00CB0FD2 /* StanzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B351F148FFD00CB0FD2 /* StanzaTests.swift */; };
+		EC9988911F5E4F7800D45091 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9988901F5E4F7800D45091 /* Player.swift */; };
+		EC9988931F5E4FA300D45091 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9988921F5E4FA300D45091 /* PlayerTests.swift */; };
 		ECBA5E1A1F281ECA001A644C /* SubtitleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBA5E191F281ECA001A644C /* SubtitleEvent.swift */; };
 		ECBA5E1E1F284FFA001A644C /* test.srt in Resources */ = {isa = PBXBuildFile; fileRef = ECBA5E1D1F284FFA001A644C /* test.srt */; };
+		ECCD98F01F5E7EED0098D8FB /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9988901F5E4F7800D45091 /* Player.swift */; };
+		ECCD98F21F5E87660098D8FB /* spiderman.mov in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B1D1F13965E00CB0FD2 /* spiderman.mov */; };
+		ECCD98F31F5E87660098D8FB /* test.srt in Resources */ = {isa = PBXBuildFile; fileRef = ECBA5E1D1F284FFA001A644C /* test.srt */; };
+		ECCD98F41F5E87660098D8FB /* Stanza.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B1B1F1395F100CB0FD2 /* Stanza.swift */; };
+		ECCD98F51F5E87660098D8FB /* EventMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B291F139E5700CB0FD2 /* EventMaker.swift */; };
+		ECCD98F61F5E87660098D8FB /* SubtitleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC27F7E01F1725960089369F /* SubtitleIO.swift */; };
+		ECCD98F71F5E87660098D8FB /* SubtitleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBA5E191F281ECA001A644C /* SubtitleEvent.swift */; };
+		ECCD98F81F5E87720098D8FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD64A5D1F0A4536004BFA93 /* AppDelegate.swift */; };
+		ECCD98F91F5E87720098D8FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD64A5F1F0A4536004BFA93 /* ViewController.swift */; };
 		ECD64A5E1F0A4536004BFA93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD64A5D1F0A4536004BFA93 /* AppDelegate.swift */; };
 		ECD64A601F0A4536004BFA93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD64A5F1F0A4536004BFA93 /* ViewController.swift */; };
 		ECD64A631F0A4536004BFA93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD64A611F0A4536004BFA93 /* Main.storyboard */; };
@@ -40,8 +56,10 @@
 
 /* Begin PBXFileReference section */
 		EC27F7E01F1725960089369F /* SubtitleIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleIO.swift; sourceTree = "<group>"; };
-		EC27F7E21F1727710089369F /* Initializers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Initializers.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EC298DAE1F1741AB005949E9 /* SubtitleIOTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleIOTests.swift; sourceTree = "<group>"; };
+		EC2C11811F5E707600C823E0 /* ITime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITime.swift; sourceTree = "<group>"; };
+		EC2C11831F5E732000C823E0 /* TimeDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeDouble.swift; sourceTree = "<group>"; };
+		EC2C11861F5E748300C823E0 /* MyTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTime.swift; sourceTree = "<group>"; };
 		EC2D6B1B1F1395F100CB0FD2 /* Stanza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stanza.swift; sourceTree = "<group>"; };
 		EC2D6B1D1F13965E00CB0FD2 /* spiderman.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = spiderman.mov; sourceTree = "<group>"; };
 		EC2D6B211F13991800CB0FD2 /* SubtitleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleTests.swift; sourceTree = "<group>"; };
@@ -50,6 +68,8 @@
 		EC2D6B2E1F14591200CB0FD2 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		EC2D6B311F1460F200CB0FD2 /* spiderman.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spiderman.srt; sourceTree = "<group>"; };
 		EC2D6B351F148FFD00CB0FD2 /* StanzaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StanzaTests.swift; sourceTree = "<group>"; };
+		EC9988901F5E4F7800D45091 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		EC9988921F5E4FA300D45091 /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
 		ECBA5E191F281ECA001A644C /* SubtitleEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleEvent.swift; sourceTree = "<group>"; };
 		ECBA5E1D1F284FFA001A644C /* test.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.srt; sourceTree = "<group>"; };
 		ECD64A5A1F0A4536004BFA93 /* TimeMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +104,6 @@
 		EC2D6AEB1F13428300CB0FD2 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				EC27F7E21F1727710089369F /* Initializers.playground */,
 			);
 			name = Playgrounds;
 			sourceTree = "<group>";
@@ -100,6 +119,9 @@
 				EC2D6B311F1460F200CB0FD2 /* spiderman.srt */,
 				EC27F7E01F1725960089369F /* SubtitleIO.swift */,
 				ECBA5E191F281ECA001A644C /* SubtitleEvent.swift */,
+				EC9988901F5E4F7800D45091 /* Player.swift */,
+				EC2C11811F5E707600C823E0 /* ITime.swift */,
+				EC2C11861F5E748300C823E0 /* MyTime.swift */,
 			);
 			name = Subtitles;
 			sourceTree = "<group>";
@@ -145,6 +167,8 @@
 				EC2D6B231F1399C100CB0FD2 /* TestConstants.swift */,
 				EC2D6B351F148FFD00CB0FD2 /* StanzaTests.swift */,
 				EC298DAE1F1741AB005949E9 /* SubtitleIOTests.swift */,
+				EC9988921F5E4FA300D45091 /* PlayerTests.swift */,
+				EC2C11831F5E732000C823E0 /* TimeDouble.swift */,
 			);
 			path = TimeMockTests;
 			sourceTree = "<group>";
@@ -252,6 +276,8 @@
 			files = (
 				EC2D6B331F1460F200CB0FD2 /* spiderman.srt in Resources */,
 				EC2D6B301F14591200CB0FD2 /* test.txt in Resources */,
+				ECCD98F21F5E87660098D8FB /* spiderman.mov in Resources */,
+				ECCD98F31F5E87660098D8FB /* test.srt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,9 +290,12 @@
 			files = (
 				EC28BB0F1F1C7C0900804EA0 /* Stanza.swift in Sources */,
 				EC27F7E11F1725960089369F /* SubtitleIO.swift in Sources */,
+				EC2C11871F5E748300C823E0 /* MyTime.swift in Sources */,
 				ECBA5E1A1F281ECA001A644C /* SubtitleEvent.swift in Sources */,
 				EC28BB0C1F1C7B6F00804EA0 /* EventMaker.swift in Sources */,
+				EC9988911F5E4F7800D45091 /* Player.swift in Sources */,
 				ECD64A601F0A4536004BFA93 /* ViewController.swift in Sources */,
+				EC2C11821F5E707600C823E0 /* ITime.swift in Sources */,
 				ECD64A5E1F0A4536004BFA93 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,10 +304,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECCD98F91F5E87720098D8FB /* ViewController.swift in Sources */,
+				ECCD98F41F5E87660098D8FB /* Stanza.swift in Sources */,
+				EC2C11851F5E743500C823E0 /* ITime.swift in Sources */,
+				EC9988931F5E4FA300D45091 /* PlayerTests.swift in Sources */,
+				ECCD98F61F5E87660098D8FB /* SubtitleIO.swift in Sources */,
+				ECCD98F81F5E87720098D8FB /* AppDelegate.swift in Sources */,
 				EC2D6B371F148FFD00CB0FD2 /* StanzaTests.swift in Sources */,
+				ECCD98F71F5E87660098D8FB /* SubtitleEvent.swift in Sources */,
+				ECCD98F51F5E87660098D8FB /* EventMaker.swift in Sources */,
 				EC2D6B241F1399C100CB0FD2 /* TestConstants.swift in Sources */,
+				EC2C11891F5E7A4A00C823E0 /* MyTime.swift in Sources */,
 				EC2D6B221F13991800CB0FD2 /* SubtitleTests.swift in Sources */,
 				EC298DAF1F1741AB005949E9 /* SubtitleIOTests.swift in Sources */,
+				ECCD98F01F5E7EED0098D8FB /* Player.swift in Sources */,
+				EC2C11841F5E732000C823E0 /* TimeDouble.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
