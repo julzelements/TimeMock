@@ -72,5 +72,4 @@ class PlayerTests: XCTestCase {
         XCTAssertEqual(expected, calculatedInterval)
     }
     
-    
 }

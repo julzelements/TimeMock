@@ -37,6 +37,7 @@
 		ECCD98F71F5E87660098D8FB /* SubtitleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBA5E191F281ECA001A644C /* SubtitleEvent.swift */; };
 		ECCD98F81F5E87720098D8FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD64A5D1F0A4536004BFA93 /* AppDelegate.swift */; };
 		ECCD98F91F5E87720098D8FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD64A5F1F0A4536004BFA93 /* ViewController.swift */; };
+		ECCD99001F5F697E0098D8FB /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCD98FF1F5F697E0098D8FB /* PlayerViewController.swift */; };
 		ECD64A5E1F0A4536004BFA93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD64A5D1F0A4536004BFA93 /* AppDelegate.swift */; };
 		ECD64A601F0A4536004BFA93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD64A5F1F0A4536004BFA93 /* ViewController.swift */; };
 		ECD64A631F0A4536004BFA93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD64A611F0A4536004BFA93 /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 		EC9988921F5E4FA300D45091 /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
 		ECBA5E191F281ECA001A644C /* SubtitleEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleEvent.swift; sourceTree = "<group>"; };
 		ECBA5E1D1F284FFA001A644C /* test.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.srt; sourceTree = "<group>"; };
+		ECCD98FF1F5F697E0098D8FB /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		ECD64A5A1F0A4536004BFA93 /* TimeMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD64A5D1F0A4536004BFA93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECD64A5F1F0A4536004BFA93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				ECD64A641F0A4536004BFA93 /* Assets.xcassets */,
 				ECD64A661F0A4536004BFA93 /* LaunchScreen.storyboard */,
 				ECD64A691F0A4536004BFA93 /* Info.plist */,
+				ECCD98FF1F5F697E0098D8FB /* PlayerViewController.swift */,
 			);
 			path = TimeMock;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				ECD64A601F0A4536004BFA93 /* ViewController.swift in Sources */,
 				EC2C11821F5E707600C823E0 /* ITime.swift in Sources */,
 				ECD64A5E1F0A4536004BFA93 /* AppDelegate.swift in Sources */,
+				ECCD99001F5F697E0098D8FB /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
