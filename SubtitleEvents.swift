@@ -37,7 +37,7 @@ class SubtitleEvents {
     }
     
     private static func sanitizeLineBreaks(rawSRTString: String) -> String {
-        return rawSRTString.replacingOccurrences(of: "\r", with: "\n")
+        return rawSRTString.replacingOccurrences(of: "\r\n", with: "\n")
     }
     
     subscript(index: Int) -> SubtitleEvent {

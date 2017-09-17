@@ -16,10 +16,14 @@ class SubtitleEventsTests: XCTestCase {
         ironManBlob = SubtitleIO.getRawStringFromFileInBundle(fileName: "IronMan", fileExtension: "srt")
     }
 
+    func testForParsingOfSpiderman() {
+        let spiderManBlob = SubtitleIO.getRawStringFromFileInBundle(fileName: "spiderman", fileExtension: "srt")
+        SubtitleEvents(rawSRTString: spiderManBlob)
+    }
+    
     func testSubscriptTest() {
-        let events = SubtitleEvents(rawSRTString: ironManBlob)
-        print(events[0])
-        print(events[1])
+        print(ironManBlob)
+        SubtitleEvents(rawSRTString: ironManBlob)
     }
     
 }
