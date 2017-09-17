@@ -24,6 +24,11 @@
 		EC2D6B321F1460F200CB0FD2 /* spiderman.srt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B311F1460F200CB0FD2 /* spiderman.srt */; };
 		EC2D6B331F1460F200CB0FD2 /* spiderman.srt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B311F1460F200CB0FD2 /* spiderman.srt */; };
 		EC2D6B371F148FFD00CB0FD2 /* StanzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B351F148FFD00CB0FD2 /* StanzaTests.swift */; };
+		EC3402D31F6E328C0079E2C8 /* SRTTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3402D21F6E328C0079E2C8 /* SRTTime.swift */; };
+		EC3402D51F6E3B010079E2C8 /* SRTTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3402D41F6E3B010079E2C8 /* SRTTimeTests.swift */; };
+		EC3402D61F6E405D0079E2C8 /* SRTTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3402D21F6E328C0079E2C8 /* SRTTime.swift */; };
+		EC3402D81F6E5B510079E2C8 /* IronMan.srt in Resources */ = {isa = PBXBuildFile; fileRef = EC3402D71F6E5A5C0079E2C8 /* IronMan.srt */; };
+		EC3402D91F6E5B520079E2C8 /* IronMan.srt in Resources */ = {isa = PBXBuildFile; fileRef = EC3402D71F6E5A5C0079E2C8 /* IronMan.srt */; };
 		EC9988911F5E4F7800D45091 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9988901F5E4F7800D45091 /* Player.swift */; };
 		EC9988931F5E4FA300D45091 /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9988921F5E4FA300D45091 /* PlayerTests.swift */; };
 		ECBA5E1A1F281ECA001A644C /* SubtitleEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBA5E191F281ECA001A644C /* SubtitleEvent.swift */; };
@@ -69,6 +74,9 @@
 		EC2D6B2E1F14591200CB0FD2 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		EC2D6B311F1460F200CB0FD2 /* spiderman.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spiderman.srt; sourceTree = "<group>"; };
 		EC2D6B351F148FFD00CB0FD2 /* StanzaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StanzaTests.swift; sourceTree = "<group>"; };
+		EC3402D21F6E328C0079E2C8 /* SRTTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTTime.swift; sourceTree = "<group>"; };
+		EC3402D41F6E3B010079E2C8 /* SRTTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTTimeTests.swift; sourceTree = "<group>"; };
+		EC3402D71F6E5A5C0079E2C8 /* IronMan.srt */ = {isa = PBXFileReference; lastKnownFileType = text; path = IronMan.srt; sourceTree = "<group>"; };
 		EC9988901F5E4F7800D45091 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		EC9988921F5E4FA300D45091 /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
 		ECBA5E191F281ECA001A644C /* SubtitleEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleEvent.swift; sourceTree = "<group>"; };
@@ -114,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				EC2D6B1D1F13965E00CB0FD2 /* spiderman.mov */,
+				EC3402D71F6E5A5C0079E2C8 /* IronMan.srt */,
 				EC2D6B2E1F14591200CB0FD2 /* test.txt */,
 				ECBA5E1D1F284FFA001A644C /* test.srt */,
 				EC2D6B1B1F1395F100CB0FD2 /* Stanza.swift */,
@@ -124,6 +133,7 @@
 				EC9988901F5E4F7800D45091 /* Player.swift */,
 				EC2C11811F5E707600C823E0 /* ITime.swift */,
 				EC2C11861F5E748300C823E0 /* MyTime.swift */,
+				EC3402D21F6E328C0079E2C8 /* SRTTime.swift */,
 			);
 			name = Subtitles;
 			sourceTree = "<group>";
@@ -172,6 +182,7 @@
 				EC298DAE1F1741AB005949E9 /* SubtitleIOTests.swift */,
 				EC9988921F5E4FA300D45091 /* PlayerTests.swift */,
 				EC2C11831F5E732000C823E0 /* TimeDouble.swift */,
+				EC3402D41F6E3B010079E2C8 /* SRTTimeTests.swift */,
 			);
 			path = TimeMockTests;
 			sourceTree = "<group>";
@@ -269,6 +280,7 @@
 				ECBA5E1E1F284FFA001A644C /* test.srt in Resources */,
 				ECD64A631F0A4536004BFA93 /* Main.storyboard in Resources */,
 				EC2D6B2F1F14591200CB0FD2 /* test.txt in Resources */,
+				EC3402D81F6E5B510079E2C8 /* IronMan.srt in Resources */,
 				EC2D6B1E1F13965E00CB0FD2 /* spiderman.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +292,7 @@
 				EC2D6B331F1460F200CB0FD2 /* spiderman.srt in Resources */,
 				EC2D6B301F14591200CB0FD2 /* test.txt in Resources */,
 				ECCD98F21F5E87660098D8FB /* spiderman.mov in Resources */,
+				EC3402D91F6E5B520079E2C8 /* IronMan.srt in Resources */,
 				ECCD98F31F5E87660098D8FB /* test.srt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +314,7 @@
 				EC2C11821F5E707600C823E0 /* ITime.swift in Sources */,
 				ECD64A5E1F0A4536004BFA93 /* AppDelegate.swift in Sources */,
 				ECCD99001F5F697E0098D8FB /* PlayerViewController.swift in Sources */,
+				EC3402D31F6E328C0079E2C8 /* SRTTime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +330,9 @@
 				ECCD98F81F5E87720098D8FB /* AppDelegate.swift in Sources */,
 				EC2D6B371F148FFD00CB0FD2 /* StanzaTests.swift in Sources */,
 				ECCD98F71F5E87660098D8FB /* SubtitleEvent.swift in Sources */,
+				EC3402D51F6E3B010079E2C8 /* SRTTimeTests.swift in Sources */,
 				ECCD98F51F5E87660098D8FB /* EventMaker.swift in Sources */,
+				EC3402D61F6E405D0079E2C8 /* SRTTime.swift in Sources */,
 				EC2D6B241F1399C100CB0FD2 /* TestConstants.swift in Sources */,
 				EC2C11891F5E7A4A00C823E0 /* MyTime.swift in Sources */,
 				EC2D6B221F13991800CB0FD2 /* SubtitleTests.swift in Sources */,

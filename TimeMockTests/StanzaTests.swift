@@ -41,4 +41,10 @@ class StanzaTests: XCTestCase {
         XCTAssertEqual(expectedLines, stanza.lines)
     }
     
+    func testIronManSubtitlesShouldParseCorrectly() {
+        let ironManBlob = SubtitleIO.getRawStringFromFileInBundle(fileName: "IronMan", fileExtension: "srt")
+        let ironManStanzas = Stanza(stanzaBlob: ironManBlob)
+        print(ironManStanzas)
+    }
+    
 }

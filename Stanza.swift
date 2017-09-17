@@ -59,8 +59,17 @@ class Stanza {
         }
     }
     
-    func extractTimeChunks(stanzaBlob: String) -> (startChunk: String, endChunk: String)? {
-        let split = stanzaBlob.components(separatedBy: "-->")
+    private func scanForTimes(stanzaBlob: String) -> (startTime: Double, endTime: Double) {
+        let timeChunks = splitTimeChunks(stanzaBlob: stanzaBlob)!
+        let startChunk = timeChunks.startChunk
+        let endChunk = timeChunks.endChunk
+        let start = SRTTime(srtTime: startChunk).seconds_Double
+        let end = SRTTime(srtTime: endChunk).seconds_Double
+        return (start, end)
+    }
+    
+    func splitTimeChunks(stanzaBlob: String) -> (startChunk: String, endChunk: String)? {
+        let split = stanzaBlob.components(separatedBy: " --> ")
         if split.count == 2 {
             let startChunk = split[0]
             let endChunk = split[1]
@@ -68,22 +77,7 @@ class Stanza {
         }
         return nil
     }
-    
-    func extractTime(timeChunk: String) -> String? {
-        let timeStampPattern = "\\d\\d:\\d\\d:\\d\\d,\\d\\d\\d"
-        if let timeRange = timeChunk.range(of: timeStampPattern, options: .regularExpression) {
-            return String(timeChunk[timeRange])
-        }
-        return nil
-    }
-    
-    private func scanForTimes(stanzaBlob: String) -> (startTime: Double, endTime: Double) {
-        let timeChunks = extractTimeChunks(stanzaBlob: stanzaBlob)!
-        let start = convertSRTTimeToDouble(SRTTime: extractTime(timeChunk: timeChunks.startChunk)!)
-        let end = convertSRTTimeToDouble(SRTTime: extractTime(timeChunk: timeChunks.endChunk)!)
-        return (start, end)
-    }
-    
+
     func scanForLines(splitBlob: [String]) -> [String] {
         var noBlankLines = removeBlankLines(lines: splitBlob)
         var lines = [String]()
@@ -102,18 +96,5 @@ class Stanza {
         }
         return noBlankLines
     }
-    
-    func convertSRTTimeToDouble(SRTTime: String) -> Double {
-        var timeDouble = Double()
-        let timeWithNoColon = SRTTime.replacingOccurrences(of: ",", with: ":")
-        let timeArray = timeWithNoColon.components(separatedBy: ":")
-        if timeArray.count == 4 {
-            let hours = Double(timeArray[0])
-            let minutes = Double(timeArray[1])
-            let seconds = Double(timeArray[2])
-            let milliseconds = Double(timeArray[3])
-            timeDouble = (hours! * 3600.0) + (minutes! * 60.0) + (seconds!) + (milliseconds! / 1000.0)
-        }
-        return timeDouble
-    }
+
 }
