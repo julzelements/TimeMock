@@ -27,4 +27,5 @@ struct SubtitleEvent: Hashable, Equatable {
         return lhs.time == rhs.time &&
             rhs.text == lhs.text
     }
+
 }

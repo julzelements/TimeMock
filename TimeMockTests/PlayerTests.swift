@@ -10,7 +10,7 @@ import XCTest
 @testable import TimeMock
 
 class PlayerTests: XCTestCase {
-    var events: [SubtitleEvent]!
+    var events: SubtitleEvents!
     var player: Player!
     var timeDouble: ITime!
     
@@ -39,7 +39,7 @@ class PlayerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         let rawString = SubtitleIO.getRawStringFromFileInBundle(fileName: "test", fileExtension: "srt")
-        events = EventMaker.getEvents(rawSRTString: rawString)
+        events = SubtitleEvents(rawSRTString: rawString)
         timeDouble = TimeDouble(systemTime: 1700.0)
         player = Player(apiSystemTime: 1691.5 , apiMovieTime: 16.0, arrayOfEvents: events, time: timeDouble)
     }

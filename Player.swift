@@ -11,14 +11,14 @@ import UIKit
 class Player {
     var apiSystemTime: Double!
     var apiMovieTime: Double!
-    var events: [SubtitleEvent]!
+    var events: SubtitleEvents!
     var time: ITime!
     
     var currentMovieTime: Double!
     var currentSubtitleIndex: Int!
     var timeIntervalToNextSubtitle: Double!
     
-    init(apiSystemTime: Double, apiMovieTime: Double, arrayOfEvents: [SubtitleEvent], time: ITime) {
+    init(apiSystemTime: Double, apiMovieTime: Double, arrayOfEvents: SubtitleEvents, time: ITime) {
         self.apiSystemTime = apiSystemTime
         self.apiMovieTime = apiMovieTime
         self.events = arrayOfEvents

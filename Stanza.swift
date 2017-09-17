@@ -55,6 +55,7 @@ class Stanza {
         if let indexInt = Int(indexString) {
             return indexInt
         } else {
+            print("index of stanza not found\n\(stanzaBlob)")
             return 0
         }
     }
@@ -75,6 +76,7 @@ class Stanza {
             let endChunk = split[1]
             return (startChunk, endChunk)
         }
+        print("times error in: \(stanzaBlob)")
         return nil
     }
 

@@ -13,7 +13,7 @@ class PlayerViewController: UIViewController {
     var apiSystemTime: Double!
     var apiMovieTime: Double!
     var player: Player!
-    var events: [SubtitleEvent]!
+    var events: SubtitleEvents!
     var time: MyTime!
     
     var timer = Timer()
@@ -32,9 +32,9 @@ class PlayerViewController: UIViewController {
         getReadyForTheNextSubtitle()
     }
 
-    func getEvents() -> [SubtitleEvent] {
+    func getEvents() -> SubtitleEvents {
         let rawSubs = SubtitleIO.getRawStringFromFileInBundle(fileName: "test", fileExtension: "srt")
-        return EventMaker.getEvents(rawSRTString: rawSubs)
+        return SubtitleEvents(rawSRTString: rawSubs)
     }
     
     func callApi() -> Double {

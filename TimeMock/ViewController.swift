@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     var timer = Timer()
     var accuracyResults: [Double]!
-    var events: [SubtitleEvent]!
+    var events: SubtitleEvents!
     var globalTime: Date!
     var player: Player!
     
@@ -58,9 +58,9 @@ class ViewController: UIViewController {
     }
     
     
-    func getEvents() -> [SubtitleEvent] {
+    func getEvents() -> SubtitleEvents {
         let rawSubs = SubtitleIO.getRawStringFromFileInBundle(fileName: "test", fileExtension: "srt")
-        return EventMaker.getEvents(rawSRTString: rawSubs)
+        return SubtitleEvents(rawSRTString: rawSubs)
     }
     
     func getRawURLFromFileInBundle(fileName: String, fileExtension: String) -> URL {

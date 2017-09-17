@@ -13,12 +13,12 @@ class SubtitleTests: XCTestCase {
     
     var testStanza28: Stanza!
     var subtitles: [Int: Stanza]!
-    var events: [SubtitleEvent]!
+    var events: SubtitleEvents!
     
     override func setUp() {
         super.setUp()
         testStanza28 = Stanza(stanzaBlob: TestConstants.stanzaBlobIndex28.rawValue)
-        events = EventMaker.getEvents(rawSRTString: TestConstants.spiderManSRTStringWithLineReturns.rawValue)
+        events = SubtitleEvents(rawSRTString: TestConstants.spiderManSRTStringWithLineReturns.rawValue)
     }
     
     func testEventMakerShouldCreateEndEventForStanza28() {
