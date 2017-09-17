@@ -17,7 +17,6 @@
 		EC2C11891F5E7A4A00C823E0 /* MyTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2C11861F5E748300C823E0 /* MyTime.swift */; };
 		EC2D6B1E1F13965E00CB0FD2 /* spiderman.mov in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B1D1F13965E00CB0FD2 /* spiderman.mov */; };
 		EC2D6B221F13991800CB0FD2 /* SubtitleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B211F13991800CB0FD2 /* SubtitleTests.swift */; };
-		EC2D6B241F1399C100CB0FD2 /* TestConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D6B231F1399C100CB0FD2 /* TestConstants.swift */; };
 		EC2D6B2F1F14591200CB0FD2 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B2E1F14591200CB0FD2 /* test.txt */; };
 		EC2D6B301F14591200CB0FD2 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B2E1F14591200CB0FD2 /* test.txt */; };
 		EC2D6B321F1460F200CB0FD2 /* spiderman.srt in Resources */ = {isa = PBXBuildFile; fileRef = EC2D6B311F1460F200CB0FD2 /* spiderman.srt */; };
@@ -70,7 +69,6 @@
 		EC2D6B1B1F1395F100CB0FD2 /* Stanza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stanza.swift; sourceTree = "<group>"; };
 		EC2D6B1D1F13965E00CB0FD2 /* spiderman.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = spiderman.mov; sourceTree = "<group>"; };
 		EC2D6B211F13991800CB0FD2 /* SubtitleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleTests.swift; sourceTree = "<group>"; };
-		EC2D6B231F1399C100CB0FD2 /* TestConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestConstants.swift; sourceTree = "<group>"; };
 		EC2D6B2E1F14591200CB0FD2 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		EC2D6B311F1460F200CB0FD2 /* spiderman.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = spiderman.srt; sourceTree = "<group>"; };
 		EC2D6B351F148FFD00CB0FD2 /* StanzaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StanzaTests.swift; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 			children = (
 				ECD64A741F0A4536004BFA93 /* Info.plist */,
 				EC2D6B211F13991800CB0FD2 /* SubtitleTests.swift */,
-				EC2D6B231F1399C100CB0FD2 /* TestConstants.swift */,
 				EC2D6B351F148FFD00CB0FD2 /* StanzaTests.swift */,
 				EC298DAE1F1741AB005949E9 /* SubtitleIOTests.swift */,
 				EC9988921F5E4FA300D45091 /* PlayerTests.swift */,
@@ -337,7 +334,6 @@
 				EC3402D51F6E3B010079E2C8 /* SRTTimeTests.swift in Sources */,
 				EC3402D61F6E405D0079E2C8 /* SRTTime.swift in Sources */,
 				EC3402DE1F6E99560079E2C8 /* SubtitleEvents.swift in Sources */,
-				EC2D6B241F1399C100CB0FD2 /* TestConstants.swift in Sources */,
 				EC2C11891F5E7A4A00C823E0 /* MyTime.swift in Sources */,
 				EC2D6B221F13991800CB0FD2 /* SubtitleTests.swift in Sources */,
 				EC298DAF1F1741AB005949E9 /* SubtitleIOTests.swift in Sources */,

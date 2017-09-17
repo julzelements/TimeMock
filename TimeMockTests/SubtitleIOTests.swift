@@ -10,23 +10,7 @@ import XCTest
 @testable import TimeMock
 
 class SubtitleIOTests: XCTestCase {
-    
-    func testSouldReadTestStringFromHelperClass() {
-        let mySimpleTestString = TestConstants.mySimpleTestString
-        XCTAssertEqual("testString", mySimpleTestString.rawValue)
-    }
-    
-    func testShouldGetTestTextFromTestFileInBundle() {
-        let testString = SubtitleIO.getRawStringFromFileInBundle(fileName: "test", fileExtension: "txt")
-        XCTAssertEqual("test", testString)
-    }
-    
-    func testSubsFromBundleShouldEqualSubsInTestConstants() {
-        let testString = SubtitleIO.getRawStringFromFileInBundle(fileName: "spiderman", fileExtension: "srt")
-        let spiderManSRTText = TestConstants.spiderManSRTString.rawValue
-        XCTAssertEqual(spiderManSRTText, testString)
-    }
-    
+       
     func testShouldGetBadURLErrorMessageWhenTryingToGetNonExistentFileFromBundle() {
         let expectedError = "could not obtain URL"
         let request = SubtitleIO.getRawStringFromFileInBundle(fileName: "foo", fileExtension: "bar")

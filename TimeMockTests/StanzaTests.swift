@@ -11,12 +11,12 @@ import XCTest
 
 class StanzaTests: XCTestCase {
     var stanza: Stanza!
-    
+    var stanzaBlob28: String!
     
     override func setUp() {
         super.setUp()
-        let stanzaBlob = TestConstants.stanzaBlobIndex28.rawValue
-        stanza = Stanza(stanzaBlob: stanzaBlob)
+        stanzaBlob28 = "28\n00:01:46,120 --> 00:01:49,320\n- But you are a kid.\n- This is my chance to prove myself.\n\n"
+        stanza = Stanza(stanzaBlob: stanzaBlob28)
     }
     
     func testStanzaShouldHaveIndexOf28() {
@@ -25,8 +25,7 @@ class StanzaTests: XCTestCase {
     }
     
     func testStanzaShouldHaveStartTime() {
-        let stanzaBlob = TestConstants.stanzaBlobIndex28.rawValue
-        stanza = Stanza(stanzaBlob: stanzaBlob)
+        stanza = Stanza(stanzaBlob: stanzaBlob28)
         let expectedStartTime = 60.0 + 46.0 + 0.120 //"00:01:46,120"
         XCTAssertEqual(expectedStartTime, stanza.startTime)
     }

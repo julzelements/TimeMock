@@ -17,8 +17,10 @@ class SubtitleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        testStanza28 = Stanza(stanzaBlob: TestConstants.stanzaBlobIndex28.rawValue)
-        events = SubtitleEvents(rawSRTString: TestConstants.spiderManSRTStringWithLineReturns.rawValue)
+        let stanzaBlob28 = "28\n00:01:46,120 --> 00:01:49,320\n- But you are a kid.\n- This is my chance to prove myself.\n\n"
+        let spiderManSRTBlob = SubtitleIO.getRawStringFromFileInBundle(fileName: "spiderman", fileExtension: "srt")
+        events = SubtitleEvents(rawSRTString: spiderManSRTBlob)
+        testStanza28 = Stanza(stanzaBlob: stanzaBlob28)
     }
     
     func testEventMakerShouldCreateEndEventForStanza28() {
