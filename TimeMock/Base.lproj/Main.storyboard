@@ -53,8 +53,23 @@
                     <view key="view" contentMode="scaleToFill" id="bjW-XY-wdd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLf-ER-wzv">
+                                <rect key="frame" x="139" y="274" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hLf-ER-wzv" firstAttribute="centerX" secondItem="bjW-XY-wdd" secondAttribute="centerX" id="2UW-s4-E2j"/>
+                            <constraint firstItem="hLf-ER-wzv" firstAttribute="centerY" secondItem="bjW-XY-wdd" secondAttribute="centerY" id="OLy-kc-kGk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="hLf-ER-wzv" id="7ad-4a-w6V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLc-ki-AKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

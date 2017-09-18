@@ -42,8 +42,14 @@ class StanzaTests: XCTestCase {
     
     func testIronManSubtitlesShouldParseCorrectly() {
         let ironManBlob = SubtitleIO.getRawStringFromFileInBundle(fileName: "IronMan", fileExtension: "srt")
-        let ironManStanzas = SubtitleEvents(rawSRTString: ironManBlob)
-        print(ironManStanzas)
+        let _ = SubtitleEvents(rawSRTString: ironManBlob)
+    }
+    
+    func testIronManEvent63ShouldBePresent() {
+        let ironManBlob = SubtitleIO.getRawStringFromFileInBundle(fileName: "IronMan", fileExtension: "srt")
+        let events = SubtitleEvents(rawSRTString: ironManBlob)
+        let event63 = events[63]
+        print(event63)
     }
     
 }

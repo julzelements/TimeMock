@@ -22,7 +22,6 @@ class SubtitleEvents {
     
     private static func getEvents(rawSRTString: String) -> [SubtitleEvent] {
         let sanitizedSRT = sanitizeLineBreaks(rawSRTString: rawSRTString)
-        print(sanitizedSRT)
         let stanzaBlobs = sanitizedSRT.components(separatedBy: "\n\n")
         var events = [SubtitleEvent]()
         for stanzaBlob in stanzaBlobs {

@@ -21,8 +21,8 @@ class PlayerTests: XCTestCase {
     //The time for this test is mocked out. The test is called when the system time is 1700
     //At 1700 the movie is 24.5 seconds into playing
     //
-    //There should be silence at 24 til 25 seconds (subtitle[23])
-    //There shoudl be a subtitle at 25 til 26 seconds (subtitle[24])
+    //There should be silence at 24 til 25 seconds (event[23])
+    //There shoudl be a subtitle at 25 til 26 seconds (event[24])
     //
     //The subtitles are indexed in the events array
     //

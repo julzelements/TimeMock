@@ -10,6 +10,7 @@ import UIKit
 
 class PlayerViewController: UIViewController {
     
+    @IBOutlet weak var label: UILabel!
     var apiSystemTime: Double!
     var apiMovieTime: Double!
     var player: Player!
@@ -33,18 +34,18 @@ class PlayerViewController: UIViewController {
     }
 
     func getEvents() -> SubtitleEvents {
-        let rawSubs = SubtitleIO.getRawStringFromFileInBundle(fileName: "test", fileExtension: "srt")
+        let rawSubs = SubtitleIO.getRawStringFromFileInBundle(fileName: "IronMan", fileExtension: "srt")
         return SubtitleEvents(rawSRTString: rawSubs)
     }
     
     func callApi() -> Double {
-        let movieTime = 16.0
+        let movieTime = 400.0
         return movieTime
     }
     
     func makeATimer(interval: Double) {
-        print("makeATimer was called")
-        print(interval)
+        print("interval: \(interval)")
+        print("SystemTime: \(Date.timeIntervalSinceReferenceDate - apiSystemTime)")
         timer = Timer(timeInterval: interval, target: self, selector: (#selector(PlayerViewController.getReadyForTheNextSubtitle)), userInfo: nil, repeats: false)
         RunLoop.current.add(timer, forMode: .defaultRunLoopMode)
     }
@@ -52,6 +53,7 @@ class PlayerViewController: UIViewController {
     func printCurrentSubtitle() {
         let currentSubtitle = events[player.currentSubtitleIndex]
         print(currentSubtitle)
+        label.text = currentSubtitle.text
     }
     
     @objc func getReadyForTheNextSubtitle() {
